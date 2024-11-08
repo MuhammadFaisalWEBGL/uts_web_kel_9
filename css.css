@@ -2,7 +2,14 @@
     width: 50px;
     height: 50px;
 }
-
+.carousel-inner .row {
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+    display: block;
+    float: none;
+    transition: transform 0.5s ease-in-out;
+}
 .header {
     background-image: linear-gradient(lime, green);
 }
@@ -29,4 +36,10 @@ footer div ul li:first-child {
     color: green;
     font: bold;
     border-bottom: 2px solid green;
+}
+
+
+.connn p {
+    text-align: justify;
+    text-indent: 40px;
 }

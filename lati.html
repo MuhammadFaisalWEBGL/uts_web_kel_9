@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="password" name="password" id="password"> <br>
+        <label for="">
+            <input type="checkbox" name="" id="checkbox">
+            tampilkan password
+        </label>
+    </form>
+    <script>
+        const password = document.getElementById('password');
+        const checkbox = document.getElementById('checkbox');
+        checkbox.addEventListener('change', () => {
+            password.type = checkbox.checked ? 'text' : 'password';
+        });
+    </script>
+</body>
+</html>
