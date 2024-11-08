@@ -17,151 +17,74 @@
 
     <main>
         <!-- bagian hero -->
-        <div class=" latar hue-rotate-30 relative -z-10">
-            <div class=" h-[40vh] items-center justify-center text-center text-white flex bg-slate-800/50">
-                <p class="uppercase ">welcome <br> to sttcipasung</p>
+        <div class="latar hue-rotate-30 relative -z-10">
+            <div class="h-[40vh] md:h-[50vh] lg:h-[60vh] items-center justify-center text-center text-white flex bg-slate-800/50">
+                <p class="uppercase text-base md:text-lg lg:text-xl">welcome <br> to sttcipasung</p>
             </div>
         </div>
 
         <!-- bagian berita dan kegiatan -->
-        <sectio id="kegiantan" class="p-56">
-            <!-- 
-            <div id="carouselExample" class="carousel slide">
-                <div class="carousel-inner bg-red-500">
-                  <div class="carousel-item active bg-yellow-500 flex">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../img/gambar1.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title text-[.6em]">12/07/1945</h5>
-                            <p class="card-text font-semibold uppercase leading-5">Some quick example text to build
-                                on
-                                the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card flex" style="width: 18rem;">
-                        <img src="../img/gambar1.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title text-[.6em]">12/07/1945</h5>
-                            <p class="card-text font-semibold uppercase leading-5">Some quick example text to build
-                                on
-                                the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../img/gambar1.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title text-[.6em]">12/07/1945</h5>
-                            <p class="card-text font-semibold uppercase leading-5">Some quick example text to build
-                                on
-                                the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../img/gambar1.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title text-[.6em]">12/07/1945</h5>
-                            <p class="card-text font-semibold uppercase leading-5">Some quick example text to build
-                                on
-                                the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div> -->
+        <section id="kegiantan" class="p-4 md:p-8 lg:p-56">
+            <p class="text-center capitalize font-bold text-gray-700 mb-6">berita dan kegiatan terbaru</p>
 
-
-
-
-
-
-
-
-
-
-
-
-            <p class="text-center capitalize font-bold text-gray-700">berita dan kegiatan terbaru</p>
-
-
-            <div id="wadah" class="wadah flex justify-between">
-                <button id="tombolKiri" class="bi bi-chevron-double-left" text></button>
-                <div class="flex justify-between w-[80%] overflow-auto bg-blue-600">
-                    <div id="geser" class="flex justify-center gap-5 px-3 py-4">
-                        <div class="card" style="width: 18rem;">
+            <div id="wadah" class="wadah flex flex-col md:flex-row justify-between items-center">
+                <button id="tombolKiri" class="bi bi-chevron-double-left text-2xl md:text-3xl mb-4 md:mb-0"></button>
+                
+                <div class="w-full md:w-[80%] overflow-x-auto">
+                    <div id="geser" class="flex flex-nowrap gap-4 px-3 py-4">
+                        <!-- Card 1 -->
+                        <div class="card flex-shrink-0" style="width: 280px">
                             <img src="../img/gambar1.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title text-[.6em]">12/07/1945</h5>
-                                <p class="card-text font-semibold uppercase leading-5">Some quick example text to build
-                                    on
-                                    the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title text-sm">12/07/1945</h5>
+                                <p class="card-text font-semibold uppercase text-sm md:text-base leading-5">Some quick example text to build on the card title</p>
                             </div>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="../img/gambar1.jpg" class="card-img-top" alt="...">
+
+                        <!-- Card 2 -->
+                        <div class="card flex-shrink-0" style="width: 280px">
+                            <img src="../img/gambar1.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title text-[.6em]">12/07/1945</h5>
-                                <p class="card-text font-semibold uppercase leading-5">Some quick example text to build
-                                    on
-                                    the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title text-sm">12/07/1945</h5>
+                                <p class="card-text font-semibold uppercase text-sm md:text-base leading-5">Some quick example text to build on the card title</p>
                             </div>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="../img/gambar1.jpg" class="card-img-top" alt="...">
+
+                        <!-- Card 3 -->
+                        <div class="card flex-shrink-0" style="width: 280px">
+                            <img src="../img/gambar1.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title text-[.6em]">12/07/1945</h5>
-                                <p class="card-text font-semibold uppercase leading-5">Some quick example text to build
-                                    on
-                                    the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title text-sm">12/07/1945</h5>
+                                <p class="card-text font-semibold uppercase text-sm md:text-base leading-5">Some quick example text to build on the card title</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="card flex-shrink-0" style="width: 280px">
+                            <img src="../img/gambar1.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title text-sm">12/07/1945</h5>
+                                <p class="card-text font-semibold uppercase text-sm md:text-base leading-5">Some quick example text to build on the card title</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="card flex-shrink-0" style="width: 280px">
+                            <img src="../img/gambar1.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title text-sm">12/07/1945</h5>
+                                <p class="card-text font-semibold uppercase text-sm md:text-base leading-5">Some quick example text to build on the card title</p>
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-center gap-5 px-3 py-4">
-
-                        <div class="card" style="width: 18rem;">
-                            <img src="../img/gambar1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-[.6em]">12/07/1945</h5>
-                                <p class="card-text font-semibold uppercase leading-5">Some quick example text to build
-                                    on
-                                    the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="../img/gambar1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-[.6em]">12/07/1945</h5>
-                                <p class="card-text font-semibold uppercase leading-5">Some quick example text to build
-                                    on
-                                    the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <button id="tombolKanan" class="bi bi-chevron-double-right text"></button>
 
+                <button id="tombolKanan" class="bi bi-chevron-double-right text-2xl md:text-3xl mt-4 md:mt-0"></button>
             </div>
-        </sectio>
-
-
-
-
+        </section>
     </main>
 
     <footer id="footer"></footer>
-
 
     <script src="../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
