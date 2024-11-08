@@ -186,6 +186,4 @@ document.querySelector('#footer').innerHTML = `
         </div>
     </div>`
 
-function name(params) {
 
-}

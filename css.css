@@ -43,3 +43,24 @@ footer div ul li:first-child {
     text-align: justify;
     text-indent: 40px;
 }
+
+
+body {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+.navbar {
+background-color: #388e3c;
+}
+.navbar-brand, .nav-link {
+color: #ffffff !important;
+}
+.jumbotron {
+background-color: #66bb6a;
+color: #ffffff;
+}
+.footer {
+background-color: #388e3c;
+color: #ffffff;
+padding: 10px 0;
+}
