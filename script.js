@@ -104,7 +104,11 @@ function buatElementHeader() {
                                 </div>
                             </div>
                         </div>
-                        <div class="indo"></div>
+                        <div class="grid place-items-center gap-2 grid-cols-2 justify-center w-32">
+                            
+                            <button class="btn btn-primary capitalize">daftar</button>
+                            <div class="indo"></div>
+                        </div>
                 </div>
             </nav>
         </div>
@@ -141,7 +145,7 @@ window.onload = function () {
     const kontak = document.querySelector('#kontak');
     const closeKontak = document.querySelector('#closeKontak');
     const kontakModal = document.querySelector('#kontak').nextElementSibling;
-    
+
     kontak.addEventListener('click', () => {
         kontakModal.classList.toggle('hidden');
     });
