@@ -129,11 +129,13 @@ function ambilParameterURL() {
 function sorotTautanAktif() {
     const parameter = ambilParameterURL();
     const tautanAktif = document.getElementById(parameter.aktif);
-    const induk = tautanAktif.parentElement.parentElement.previousElementSibling
+    
     if (tautanAktif) {
         tautanAktif.classList.add('aktif');
-        if (induk.tagName.toLowerCase() !== 'img') {
-            induk.classList.add('aktif');
+        // Cari parent dropdown button jika ada
+        let parentButton = tautanAktif.closest('.dropdown-menu')?.previousElementSibling;
+        if (parentButton && parentButton.classList.contains('dropdown-toggle')) {
+            parentButton.classList.add('aktif');
         }
     }
 }
