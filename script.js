@@ -6,7 +6,7 @@ function buatElementHeader() {
             <nav class="flex flex-col md:flex-row capitalize gap-4 justify-between items-center">
                 <div class="flex flex-col md:flex-row items-center justify-between w-full md:w-[35%]">
                     <div class="flex items-center justify-between w-full md:w-auto">
-                        <img src="../img/image.png" class="logo mb-4 md:mb-0">
+                        <img src="../img/image.png" class="logo mb-4 md:mb-0 w-20 h-20 object-contain">
                         <!-- Hamburger menu untuk mobile -->
                         <button class="md:hidden text-2xl" id="menuToggle">
                             <i class="bi bi-list"></i>
@@ -74,37 +74,37 @@ function buatElementHeader() {
                         <input type="search" class="outline-none p-1" placeholder="cari">
                     </div>
                     <div class="cursor-pointer" id="kontak">kontak</div>
-                
-                    <div class="absolute bg-black/75 top-0 left-0 bottom-0 right-0 hidden z-20">
-                        <div class="bg-gray-100 flex items-center justify-center w-full md:w-96 min-h-screen rounded-3xl top-7 left-[50%] translate-x-[-50%] absolute">
-                            <div class="bg-white p-4 md:p-8 rounded-lg shadow-lg w-full max-w-md mx-4">
-                                <h1 class="text-xl md:text-2xl font-bold mb-6 text-center">Hubungi Admin</h1>
-                                <form action="mailto:admin@example.com" method="post" enctype="text/plain">
-                                    <div class="mb-4">
-                                        <label for="name" class="block text-gray-700 font-bold mb-2">Nama:</label>
-                                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        <div class="absolute bg-black/75 top-0 left-0 bottom-0 right-0 hidden z-20">
+                            <div class="bg-gray-100 flex items-center justify-center w-full md:w-96 min-h-screen rounded-3xl top-7 left-[50%] translate-x-[-50%] absolute pt-9">
+                                <i class="bi bi-x text-xl right-9 top-11 cursor-pointer absolute text-black hover:text-red-500" id="closeKontak"></i>
+                                <div class="bg-white p-4 md:p-8 rounded-lg shadow-lg w-full max-w-md mx-4">
+                                    <h1 class="text-xl md:text-2xl font-bold mb-6 text-center">Hubungi Admin</h1>
+                                        <form action="mailto:admin@example.com" method="post" enctype="text/plain">
+                                            <div class="mb-2">
+                                                <label for="name" class="block text-gray-700 font-bold mb-1">Nama:</label>
+                                                <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                            </div>
+                                            <div class="mb-2">
+                                                <label for="email" class="block text-gray-700 font-bold mb-1">Email:</label>
+                                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                            </div>
+                                            <div class="mb-2">
+                                                <label for="subject" class="block text-gray-700 font-bold mb-1">Subjek:</label>
+                                                <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                                            </div>
+                                            <div class="mb-2">
+                                                <label for="message" class="block text-gray-700 font-bold mb-1">Pesan:</label>
+                                                <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                                            </div>
+                                            <div class="flex items-center justify-between">
+                                                <input type="submit" value="Kirim" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div class="mb-4">
-                                        <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
-                                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="subject" class="block text-gray-700 font-bold mb-2">Subjek:</label>
-                                        <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="message" class="block text-gray-700 font-bold mb-2">Pesan:</label>
-                                        <textarea id="message" name="message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <input type="submit" value="Kirim" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                                    </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="indo"></div>
+                        <div class="indo"></div>
                 </div>
             </nav>
         </div>
@@ -137,16 +137,23 @@ function sorotTautanAktif() {
 window.onload = function () {
     buatElementHeader();
     sorotTautanAktif();
-    
+
     const kontak = document.querySelector('#kontak');
-    kontak.addEventListener('click', e => {
-        e.target.nextElementSibling.classList.toggle('hidden');
+    const closeKontak = document.querySelector('#closeKontak');
+    const kontakModal = document.querySelector('#kontak').nextElementSibling;
+    
+    kontak.addEventListener('click', () => {
+        kontakModal.classList.toggle('hidden');
+    });
+
+    closeKontak.addEventListener('click', () => {
+        kontakModal.classList.add('hidden');
     });
 
     // Tambahkan event listener untuk toggle menu hamburger
     const menuToggle = document.querySelector('#menuToggle');
     const navMenu = document.querySelector('#navMenu');
-    
+
     menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('hidden');
         navMenu.classList.toggle('opacity-0');
