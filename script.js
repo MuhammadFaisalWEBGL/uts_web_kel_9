@@ -1,5 +1,7 @@
+// Fungsi untuk membuat elemen header
 // buatElementHeader();
 function buatElementHeader() {
+    // Menambahkan HTML untuk header
     document.getElementById('header').innerHTML = `
     <div class="header p-3 bg-gradient-to-r from-lime-100 to-green-500">
     <!-- bagian navbar -->
@@ -115,6 +117,7 @@ function buatElementHeader() {
     `
 }
 
+// Fungsi untuk mengambil parameter dari URL
 function ambilParameterURL() {
     const stringQuery = window.location.search;
     const parameterURL = new URLSearchParams(stringQuery);
@@ -126,6 +129,7 @@ function ambilParameterURL() {
     return parameter;
 }
 
+// Fungsi untuk menyorot tautan yang aktif
 function sorotTautanAktif() {
     const parameter = ambilParameterURL();
     const tautanAktif = document.getElementById(parameter.aktif);
@@ -140,23 +144,28 @@ function sorotTautanAktif() {
     }
 }
 
+// Event listener saat halaman dimuat
 window.onload = function () {
+    // Memanggil fungsi untuk membuat header dan menyorot tautan aktif
     buatElementHeader();
     sorotTautanAktif();
 
+    // Mengambil elemen-elemen untuk modal kontak
     const kontak = document.querySelector('#kontak');
     const closeKontak = document.querySelector('#closeKontak');
     const kontakModal = document.querySelector('#kontak').nextElementSibling;
 
+    // Event listener untuk membuka modal kontak
     kontak.addEventListener('click', () => {
         kontakModal.classList.toggle('hidden');
     });
 
+    // Event listener untuk menutup modal kontak
     closeKontak.addEventListener('click', () => {
         kontakModal.classList.add('hidden');
     });
 
-    // Tambahkan event listener untuk toggle menu hamburger
+    // Event listener untuk toggle menu hamburger
     const menuToggle = document.querySelector('#menuToggle');
     const navMenu = document.querySelector('#navMenu');
 
@@ -169,6 +178,7 @@ window.onload = function () {
     });
 };
 
+// Menambahkan HTML untuk footer
 document.querySelector('#footer').innerHTML = `
     <div class="flex justify-center items-center p-6 md:p-10 bg-gray-700">
         <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-12 text-white capitalize">
